@@ -1,5 +1,115 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.general-navig {
+  width: 18rem;
+  height: 100vh;
+  border-right: 1px solid #504136;
+  text-align: left;
+  background-color: #7d6c65;
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+.navigation-category {
+  font-weight: bold;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-left: 20px;
+}
+
+.search-input {
+  display: flex;
+  gap: 1em;
+  box-sizing: border-box;
+  font-size: 14px;
+  position: relative;
+  border: none;
+  background: #f8f4e3;
+  padding: 8px;
+  border-radius: 6px;
+  max-width: 240px;
+}
+
+.search-input input {
+  appearance: none;
+  border: none;
+  background: #f8f4e3;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+.books {
+  margin: 2em;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  height: fit-content;
+  flex-wrap: wrap;
+  width: 60em;
+  /* justify-content: space-evenly; */
+}
+
+.navigation-item,
+.search {
+  display: flex;
+  gap: 1rem;
+  width: 10rem;
+  border-radius: 6px;
+  padding: 0.2em;
+}
+
+.navigation-item:hover {
+  background-color: #f8f4e3;
+  color: #504136;
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+.book-container {
+  display: flex;
+  flex-direction: column;
+  border: solid #504136 1px;
+  width: 16rem;
+  height: 20rem;
+  color: #504136;
+  border-radius: 2px;
+}
+
+.book-container img {
+  max-width: 10em;
+  max-height: 10em;
+}
+
+.book-container:hover,
+.add-book:hover {
+  box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+}
+
+.single-book {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  height: fit-content;
+  color: #504136;
+}
+
+.add-book {
+  height: 2rem;
+  background-color: #7d6c65;
+  border-style: none;
+  border-radius: 2px;
+  color: #f8f4e3;
 }
 
 .App-logo {
@@ -24,15 +134,8 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.library-header {
+  color: #504136;
+  display: inline-block;
+  height: fit-content;
 }
