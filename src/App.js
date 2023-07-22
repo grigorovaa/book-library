@@ -5,6 +5,8 @@ import NavBar from "./components/NavBar";
 import Header from "./containers/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
+import BookList from "./containers/BookList";
+import ProductListing from "./containers/ProductListing";
 
 function App() {
   return (
@@ -25,7 +27,12 @@ function App() {
           <NavBar />
         </section>
         {/* <ProductListing /> */}
-        <Header />
+        <section className="content">
+          <Header />
+          <ProductListing />
+          <BookList />
+        </section>
+
         {/* <section className="books" id="books">
           <div className="single-book">
             <Book>name</Book>

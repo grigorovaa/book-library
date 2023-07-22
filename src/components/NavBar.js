@@ -1,17 +1,20 @@
 // import React, { useState } from "react";
 
-import ProductListing from "../containers/ProductListing";
+// import SearchBar from "../containers/SearchBar";
+
+// import ProductListing from "../containers/ProductListing";
 
 export default function NavBar() {
   return (
     <nav>
       <ul className="navigation">
-        <li className="search" id="search-form">
-          {/* <label className="search">
+        {/* <li className="search" id="search-form"> */}
+        {/* <ProductListing /> */}
+        {/* <label className="search">
             <img src="./icons/search.svg" alt="search" width="16px" />
             <input type="text" placeholder="search" id="search-input"></input>
           </label> */}
-        </li>
+        {/* </li> */}
         <li className="navigation-category">Books</li>
         <li className="navigation-item">
           <img src="./icons/bookmark.svg" alt="bookmark" width="16px" />
@@ -37,7 +40,7 @@ export default function NavBar() {
           Finished
         </li>
       </ul>
-      <ProductListing />
+      {/* <ProductListing /> */}
       {/* <BookList /> */}
     </nav>
   );

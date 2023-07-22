@@ -1,7 +1,7 @@
 .App {
-  text-align: center;
+  margin: 0;
   display: flex;
-  flex-direction: row;
+  gap: 2em;
 }
 
 .general-navig {
@@ -11,6 +11,7 @@
   text-align: left;
   background-color: #7d6c65;
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
 }
 
 .navigation-category {
@@ -24,6 +25,11 @@
   padding-left: 20px;
 }
 
+.content {
+  overflow-y: scroll;
+  float: right;
+  flex: 1;
+}
 .search-input {
   display: flex;
   gap: 1em;
@@ -61,11 +67,16 @@ button:focus {
   /* justify-content: space-evenly; */
 }
 
+.input-form {
+  display: flex;
+  gap: 1em;
+}
+
 .navigation-item,
 .search {
   display: flex;
   gap: 1rem;
-  width: 10rem;
+  /* width: 10rem; */
   border-radius: 6px;
   padding: 0.2em;
 }
@@ -136,6 +147,6 @@ button:focus {
 
 .library-header {
   color: #504136;
-  display: inline-block;
+  /* display: inline-block; */
   height: fit-content;
 }
