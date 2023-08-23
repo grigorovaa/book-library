@@ -1,9 +1,9 @@
 import React from "react";
 import AddBookButton from "../components/AddBookButton";
 
-const BookList = ({ searchResults }) => {
+const BookList = ({ searchResults, addBookToMyBooks, myBooks }) => {
   if (!searchResults) {
-    return null; // Return null or a placeholder while the search is in progress
+    return null;
   }
 
   return (
@@ -23,15 +23,19 @@ const BookList = ({ searchResults }) => {
               src={`http://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg`}
               alt="Book Cover"
               onError={(e) => {
-                // e.target.src = "../icons/cover_not_found.jpg";
+                //TODO: supposed to print default image
                 console.log("no image");
               }}
             />
-            <AddBookButton />
+            <AddBookButton
+              book={book}
+              addBookToMyBooks={addBookToMyBooks}
+              isAdded={myBooks.includes(book)}
+            />
           </div>
         ))
       ) : (
-        // <p>No books found</p>
+        //TODO: <p>No books found</p>
         <p></p>
       )}
     </div>

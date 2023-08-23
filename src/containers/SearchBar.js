@@ -5,7 +5,7 @@ const SearchBar = ({ onSearch }) => {
 
   const handleSearch = (event) => {
     event.preventDefault();
-    onSearch(searchTerm);
+    onSearch(event.target.value);
   };
 
   return (
@@ -15,7 +15,10 @@ const SearchBar = ({ onSearch }) => {
         placeholder="Enter book title or author"
         className="search"
         value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
+        onChange={(e) => {
+          setSearchTerm(e.target.value);
+          handleSearch(e);
+        }}
       />
       <button type="submit" style={{ display: "none" }}></button>
       <img

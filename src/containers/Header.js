@@ -1,7 +1,7 @@
 import React from "react";
 
-const Header = () => {
-  return <h2 className="library-header">Book Store</h2>;
-};
+function Header(props) {
+  return <h2 className="library-header">{props.name}</h2>;
+}
 
 export default Header;

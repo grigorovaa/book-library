@@ -1,44 +1,30 @@
 import "./App.css";
-
-// import AddBookButton from "./components/AddBookButton";
 import NavBar from "./components/NavBar";
-import Header from "./containers/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
-import BookList from "./containers/BookList";
-import ProductListing from "./containers/ProductListing";
+import BookStore from "./components/navigation/BookStore";
+import MyBooks from "./components/navigation/MyBooks";
+import FinishedBooks from "./components/navigation/FinishedBooks";
+import ReadingNow from "./components/navigation/ReadingNow";
+import WantToRead from "./components/navigation/WantToRead";
 
 function App() {
   return (
     <>
       <div className="App">
         <Router>
+          <section className="general-navig">
+            <NavBar />
+          </section>
           <Routes>
-            {/* <Route path="/" exact element={<ProductListing />} /> */}
-            {/* <Route
-              path="/product/:productId"
-              exact
-              element={<ProductDetail />}
-            /> */}
             <Route>404 Not Found!</Route>
+            <Route path="/bookstore" element={<BookStore />} />
+            <Route path="/mybooks" element={<MyBooks />} />
+            <Route path="/finished" element={<FinishedBooks />} />
+            <Route path="/readingnow" element={<ReadingNow />} />
+            <Route path="/wanttoread" element={<WantToRead />} />
           </Routes>
         </Router>
-        <section className="general-navig">
-          <NavBar />
-        </section>
-        {/* <ProductListing /> */}
-        <section className="content">
-          <Header />
-          <ProductListing />
-          <BookList />
-        </section>
-
-        {/* <section className="books" id="books">
-          <div className="single-book">
-            <Book>name</Book>
-            <AddBookButton />
-          </div>
-        </section> */}
       </div>
     </>
   );
